@@ -87,8 +87,9 @@ Este repositorio corresponde a mi aporte al proyecto, el **módulo de guía virt
 
    Al terminar se crea la carpeta `Pods/` y el archivo `ArTourKaminaljuyu.xcworkspace`.
 
-4. **Configurar el entorno.** En iOS las variables de entorno se manejan con un archivo
-   `.xcconfig`. Copiar la plantilla y colocar la API key de Google Maps:
+4. **Configurar el entorno.** Las variables que usa el proyecto están documentadas en
+   [`src/.env.example`](src/.env.example). En iOS se cargan desde un archivo `.xcconfig`,
+   así que hay que copiar la plantilla y colocar la API key de Google Maps:
 
    ```bash
    cp Secrets.xcconfig.example Secrets.xcconfig
@@ -180,6 +181,7 @@ Disponible en [`/docs/consentimiento_firmado.pdf`](docs/consentimiento_firmado.p
 │   ├── informe_final.pdf
 │   └── consentimiento_firmado.pdf
 ├── /src
+│   ├── .env.example                    ← variables de entorno (sin credenciales)
 │   ├── /ArTourKaminaljuyu
 │   │   ├── /ArTourKaminaljuyu
 │   │   │   ├── /App                    ← entrada, navegación y pantallas
@@ -192,16 +194,17 @@ Disponible en [`/docs/consentimiento_firmado.pdf`](docs/consentimiento_firmado.p
 │   │   │   ├── /Resources              ← fuentes, ícono y video
 │   │   │   └── /Shared                 ← EventBus, AppStateManager y modelos
 │   │   ├── /ArTourKaminaljuyuTests     ← pruebas unitarias e integración
-│   │   ├── Podfile
-│   │   └── Secrets.xcconfig.example    ← plantilla de variables de entorno
+│   │   ├── Podfile / Podfile.lock      ← dependencias (CocoaPods)
+│   │   └── Secrets.xcconfig.example    ← plantilla de configuración de Xcode
 │   └── /PerformanceTests               ← pruebas de rendimiento
+├── .gitignore                          ← excluye credenciales, dependencias, builds e IDE
 └── README.md
 ```
 
 ## Autores
 
 - Nancy Gabriela Mazariegos Molina - 22513
+- José Santiago Pereira Alvarado - 22318
+- Mónica Alejandra Salvatierra Chacón - 22249
+- Andre Yatmian Jo Mai - 22199
 
-## Licencia
-
-Este proyecto se distribuye bajo la licencia MIT.

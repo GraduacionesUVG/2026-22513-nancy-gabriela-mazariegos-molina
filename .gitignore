@@ -1,0 +1,44 @@
+# ===== Variables de entorno y credenciales =====
+.env
+.env.local
+.env.*.local
+Secrets.xcconfig
+!Secrets.xcconfig.example
+
+# ===== Dependencias =====
+Pods/
+node_modules/
+vendor/
+Carthage/Build/
+.build/
+__pycache__/
+
+# ===== Builds =====
+build/
+dist/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ===== Xcode (datos de usuario) =====
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# ===== Caché y temporales =====
+*.log
+tmp/
+temp/
+*.tmp
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
